@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+    kompose.cmd: kompose convert -c -f docker-compose.yml
+    kompose.version: 1.25.0 (a70f80cc)
+  creationTimestamp: null
+  labels:
+    io.kompose.service: nodeserver1
+  name: nodeserver1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      io.kompose.service: nodeserver1
+  strategy: {}
+  template:
+    metadata:
+      annotations:
+        kompose.cmd: kompose convert -c -f docker-compose.yml
+        kompose.version: 1.25.0 (a70f80cc)
+      creationTimestamp: null
+      labels:
+        io.kompose.network/warnetwork: "true"
+        io.kompose.service: nodeserver1
+    spec:
+      containers:
+        - env:
+            - name: PORT
+              value: "5000"
+            - name: SERVER_NAME
+              value: server1
+            - name: TARGET_HOST
+              value: nginx
+            - name: TARGET_URI
+              value: target_server
+          image: nodeserver1
+          name: nodeserver1
+          ports:
+            - containerPort: 5000
+          resources: {}
+      restartPolicy: Always
+status: {}
