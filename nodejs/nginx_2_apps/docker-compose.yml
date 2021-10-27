@@ -11,7 +11,7 @@ services:
             TARGET_HOST: "nginx"
             TARGET_URI: "server2"
         networks:
-            - war_network
+            - warnetwork
     nodeserver2:
         build:
             context: ./app
@@ -31,7 +31,7 @@ services:
         ports:
             - "81:80"
         networks:
-            - war_network
+            - warnetwork
 networks:
-    war_network :
+    warnetwork :
         driver: bridge
