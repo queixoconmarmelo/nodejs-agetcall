@@ -1,5 +1,7 @@
-##Stack de monitorización 
+##Stack de monitorización
+
 ###kube-prometheus-stack
+
 Stack completo de prometheus + grafana + alertmager<br> 
 [https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack](https://github.com/prometheus-community/helm-charts/tree/main/charts/kube-prometheus-stack)
 
@@ -28,7 +30,7 @@ Se añade Blackbox exporter (HTTP, HTTPS, DNS, TCP and ICMP.) para la generació
     blackbox-exporter-values.yaml
 
 [https://github.com/prometheus/blackbox_exporter](https://github.com/prometheus/blackbox_exporter)
-[https://github.com/cablespaghetti/k3s-monitoring](https://github.com/cablespaghetti/k3s-monitoring/issues/4)
+[https://github.com/cablespaghetti/k3s-monitoring](https://github.com/cablespaghetti/k3s-monitoring "cablespaghetti/k3s-monitoring")
 ----
 ### Nginx ingress controller
 Habilitar ingress controller para prometheus y catálogo de métricas disponibles de **NGINX**
