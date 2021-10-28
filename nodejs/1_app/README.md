@@ -1,6 +1,8 @@
 # nodejs-agetcall
 ### 1 nodejs app
 
-Aplicación levantada y accesible externamente desde el puesto **5000**.
+Aplicación levantada y accesible desde el puesto **5000**.
 
-Imagen docker []()
+Disponible imagen docker [queixoconmarmelo/nodeapp:alone](https://hub.docker.com/repository/docker/queixoconmarmelo/nodeapp)
+    
+    docker push queixoconmarmelo/nodeapp:alone
