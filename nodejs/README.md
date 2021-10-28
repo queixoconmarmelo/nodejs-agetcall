@@ -1,13 +1,15 @@
 # nodejs-agetcall
+
 ### Nginx + nodejs app
 
-En este repo encontrarás 2 configuraciones de nginx+app
+En este repo encontrarás la aplicacion en solitario y 2 configuraciones de nginx+app
 
+- 1_app : Compose de una aplicación node en solitario.
 - 1nginx_1_app : Compose de una aplicación node y un nginx.
 - nginx_2_apps: Compose de 1 nginx compartido por 2 aplicaciones
 
 ### Aplicación node
-Aplicación sencilla para generacion de tráfico con  envio de n (aleaorio entr [3-10]) peticiones GET a un objectivo (server) configurable.
+Aplicación sencilla para generación de tráfico con  envío de n (aleaorio entr [3-10]) peticiones GET a un objectivo (server) configurable.
 
 ***Enpoints***
 
@@ -20,7 +22,7 @@ Aplicación sencilla para generacion de tráfico con  envio de n (aleaorio entr 
 ### Variables de entorno configurables desde compose
 
 **SERVER_NAME**: nombre  del propio servidor
-**PORT**: Puerto de despligue escucha de la app
+**PORT**: Puerto de despliegue/escucha de la app
 **TARGET_HOST**: ip/nombre del host objectivo
 **TARGET_URI**: uri del server destino sobre el que lanzar las peticiones
 
@@ -36,10 +38,3 @@ location /metrics {
 *nginx.conf*
 
 Métricas disponibles [link](https://docs.nginx.com/nginx-ingress-controller/logging-and-monitoring/prometheus/ "link")
-
-
-###Kubernetes
-En caso de despligue sobre k3s/k8s usar **kompose** para convertir el docker-compose del proyecto 
-[https://kompose.io/](https://kompose.io/)
-
-
