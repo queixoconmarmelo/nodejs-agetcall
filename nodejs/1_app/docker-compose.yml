@@ -1,0 +1,14 @@
+version: "3.7"
+services:
+    nodeserver:
+        build:
+            context: .
+        image: queixoconmarmelo/nodeapp:alone
+        ports:
+            - "5000:5000"
+        environment:
+            SERVER_NAME: "server1"
+            PORT: 5000
+            TARGET_HOST: "nginx"
+            TARGET_URI: "target_server"
+    
