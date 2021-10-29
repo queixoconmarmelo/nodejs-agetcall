@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: nodeapp
+spec:
+    selector:
+        matchLabels:
+            app: nodeapp
+    replicas: 1
+    template:
+        metadata:
+            labels:
+                app: nodeapp
+        spec:
+            containers:
+                - name: main
+                  image: queixoconmarmelo/nodeapp:alone
+                  imagePullPolicy: Always
+                  ports:
+                      - containerPort: 5000
+                  env:
+                      - name: SERVER_NAME
+                        value: "server1"
+                      - name: PORT
+                        value: "5000"
+                      - name: TARGET_HOST
+                        value: "nginx"
+                      - name: TARGET_URI
+                        value: "target"
