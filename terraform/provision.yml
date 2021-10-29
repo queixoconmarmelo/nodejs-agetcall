@@ -1,0 +1,23 @@
+---
+# -----------------------------------------------------------------------------------------------------
+# Playbook to run into an EC2 instance
+#
+# - Author: Rajendra Adhikari
+# - Date: 05-05-2019
+# -----------------------------------------------------------------------------------------------------
+
+- hosts: all
+  gather_facts: true
+
+  pre_tasks:
+
+  tasks:
+    - name: setup a k3s cluster
+      include_role:
+        name: setup_k3s
+
+    - name: install consul - helm deploy
+      include_role:
+        name: install_consul
+
+
