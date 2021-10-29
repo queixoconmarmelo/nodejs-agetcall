@@ -14,21 +14,16 @@ configuraciones para prubas.
 
 ----
 
-####
-
+#### Ansible
 
 ---
 
-#### Propuesta de dashboardin
-Creación de panel 
-
-
-
-
+#### Propuesta de dashboarding
+Creación de panel general con creación dinámica (pod) de gráfica de memoria vs cpu, con enlaces dinámicos a dashboad detalle con todas ls métricas relativas al pod
 
 ----
-### Interesante
 
+### Interesante
 
 #### prometheus-deadmansswitch
  - Monitorización sintética multiprotocolo [prometheus/blackbox_exporter](https://github.com/prometheus/blackbox_exporter)
