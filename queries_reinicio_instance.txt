@@ -1,0 +1,6 @@
+Siempre que no cambie de nombre
+
+Para series calculo de la diferencia para unha ventana de tiempo ej, 1,2 o 5m agrupado al mismo tiempo de la ventana
+sum(delta({})) by ()
+
+
