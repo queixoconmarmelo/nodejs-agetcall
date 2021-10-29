@@ -1,8 +1,9 @@
 version: "3.7"
 services:
-    nodeserver1:
+    nodeserver:
         build:
             context: ./app
+        image: queixoconmarmelo/nodeapp:v3
         ports:
             - "5000:5000"
         environment:
@@ -10,16 +11,10 @@ services:
             PORT: 5000
             TARGET_HOST: "nginx"
             TARGET_URI: "target_server"
-        networks:
-            - warnetwork
     nginx:
         restart: always
         build:
             context: ./nginx
+        image: queixoconmarmelo/nodeapp:v3
         ports:
             - "81:80"
-        networks:
-            - warnetwork
-networks:
-    warnetwork :
-        driver: bridge
